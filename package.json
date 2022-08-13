@@ -1,0 +1,23 @@
+{
+  "name": "ts_all_in_one",
+  "version": "1.0.0",
+  "description": "Zerocho가 inflearn에서 제공 중인 타입스크립트 강의를 학습하기 위해 레포지토리를 만들었다.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YeonSeoJo/TS_all_in_one.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YeonSeoJo/TS_all_in_one/issues"
+  },
+  "homepage": "https://github.com/YeonSeoJo/TS_all_in_one#readme",
+  "dependencies": {
+    "typescript": "^4.7.4"
+  }
+}
