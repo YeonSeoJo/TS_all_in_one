@@ -4,8 +4,48 @@ const c: boolean = true;
 const d: undefined = undefined;
 const e: null = null;
 
+// const f: 5 = 5;
+// const g: true =true;
+
+/* 함수를 typescript로 표현하는 방법 */
+
+/* 첫 번째 */
 // function add(x:number, y:number): number {return x + y};
+
+/* 두 번째 */
 // const add: (x:number, y: number) => number = (x, y) => x + y;
+// 위 화살표 함수는 아래와 같이도 작성 가능
+// type Add = (x: number, y: number) => number;
+// const add: Add = (x, y) => x + y;
+
+// function add(x: number, y: number): number;
+// function add(x, y) {
+//   return x + y;
+// }
+// add를 두 번 선언하는 것은 원칙적으로 안되지만 첫번째 add에서는 타입만 지정했으므로 두번째 함수가 작동 가능하다.
+
+/* 세 번째 */
+// interface Add {
+//   (x: number, y: number): number;
+// }
+
+// const add: Add = (x, y) => x + y;
+
+/* 객체를 표현하는 방법 */
 // const obj: { lat: number, lon:number} = { lat: 37.5, lon: 127.5};
 
+/* 배열을 표현하는  첫 번째 방법 */
+// const arr: string[] = ['123', '456'];
+
+/* 배열을 표현하는  두 번째 방법 */
+// const arr2: Array<number> = [123, 456];
+// 꺽쇠 부분은 제너릭으로 추후 추가 학습 예정
+
+/* 배열을 표현하는  세 번째 방법 */
+const arr3: [number, number, string] = [123, 456, 'hello'];
+// 튜플이라는 방식으로 길이가 고정된 배열, 타입스크립트에서는 들어오는 타입을 요소마다 지정할 수 있다.
+
+/* 타입스크립트 특징 메모 */
 // 타입스크립트는 자바스크립트의 변수, 매개변수, 리턴값에 타입을 지정하는 것
+// 1.콜론을 이용한 타입지정, 2.type을 활용한 함수형 타입선언, 3.인터페이스, 4.제너릭 이 네가지는 JS로 변환될 때 사라진다.
+// 즉 위 네가지가 없어지더라도 JS code로서 동작 가능하게 코드를 짜야한다.
