@@ -66,3 +66,11 @@ const ODirection = {
 
 const a = EDirection.Up;
 const c = EDirection.Left;
+
+function walk(dir: EDirection) {}
+
+type Direction = typeof ODirection[keyof typeof ODirection];
+function run(dir: Direction) {}
+
+walk(EDirection.Left);
+run(ODirection.Right);
