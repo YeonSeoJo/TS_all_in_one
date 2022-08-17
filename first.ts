@@ -74,3 +74,26 @@ function run(dir: Direction) {}
 
 walk(EDirection.Left);
 run(ODirection.Right);
+
+/* 타입 애일리어스와 인터페이스의 상속(extends) */
+
+type Animals = { breath: true };
+type Mamals = Animals & { breed: true };
+type Human = Mamals & { think: true };
+
+const zerocho: Human = { breath: true, breed: true, think: true };
+
+interface A {
+  breath: true;
+}
+interface B extends A {
+  breed: true;
+}
+
+// interface B extends Human {
+//   breed:true;
+// }
+
+// 위와 같이 타입과 인터페이스는 상호간에 상속이 가능하며, 별로도 동작하지 않는다.
+
+const b: B = { breath: true, breed: true };
