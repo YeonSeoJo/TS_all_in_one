@@ -64,8 +64,8 @@ const ODirection = {
   Right: 3,
 } as const;
 
-const a = EDirection.Up;
-const c = EDirection.Left;
+// const a = EDirection.Up;
+// const c = EDirection.Left;
 
 function walk(dir: EDirection) {}
 
@@ -97,3 +97,20 @@ interface B extends A {
 // 위와 같이 타입과 인터페이스는 상호간에 상속이 가능하며, 별로도 동작하지 않는다.
 
 const b: B = { breath: true, breed: true };
+
+//타입과 다르 게 인터페이스는 다음과 같이 같은 이름으로 여러 번 선언할 수 있다.
+// 매 선언시마다, 합쳐진다.
+
+interface A {
+  talk: () => void;
+}
+
+interface A {
+  eat: () => void;
+}
+
+interface A {
+  shit: () => void;
+}
+
+const a: A = { talk() {}, eat() {}, shit() {}, breath: true };
